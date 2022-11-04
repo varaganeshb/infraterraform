@@ -10,12 +10,12 @@ pipeline {
         
         stage ("terraform init") {
             steps {
-                sh ('terraform init -reconfigure') 
+                sh ('terraform init -no-color -reconfigure') 
             }
         }
         stage ("terraform plan") {
             steps {
-                sh ('terraform plan') 
+                sh ('terraform plan -no-color') 
             }
         }
                 
